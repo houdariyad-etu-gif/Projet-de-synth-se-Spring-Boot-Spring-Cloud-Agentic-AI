@@ -23,8 +23,12 @@ public class EbankAIAgent {
                 .build();
     }
 
-    public String chat(String query) {
-        return chatClient.prompt(query).call().content();
+    public String chat(String query, String conversationId) {
+        return chatClient.prompt()
+                .user(query)
+                .advisors(advisor -> advisor.param(ChatMemory.CONVERSATION_ID, conversationId))
+                .call()
+                .content();
     }
 
 }

@@ -14,7 +14,8 @@ public class EbankChatbotController {
         this.ebankAIAgent = ebankAIAgent;
     }
     @GetMapping(value= "/chat",produces = MediaType.TEXT_PLAIN_VALUE)
-    public String chat(@RequestParam(name = "query", defaultValue = "Bonjour") String query) {
-        return ebankAIAgent.chat(query);
+    public String chat(@RequestParam(name = "query", defaultValue = "Bonjour") String query,
+                       @RequestParam(name = "conversationId", defaultValue = "http-client") String conversationId) {
+        return ebankAIAgent.chat(query, conversationId);
     }
 }
