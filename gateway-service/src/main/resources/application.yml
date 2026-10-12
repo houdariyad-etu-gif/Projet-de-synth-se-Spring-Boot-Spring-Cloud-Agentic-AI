@@ -1,14 +1,24 @@
-#spring:
-#  cloud:
-#    gateway:
-#      server:
-#        webflux:
-#          routes:
-#            - id: r1
-#              uri: http://localhost:8056
-#              predicates:
-#                - Path= /customers/**
-#            - id: r2
-#              uri: http://localhost:8059
-#              predicates:
-#                - Path= /accounts/**
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          globalcors:
+            add-to-simple-url-handler-mapping: true
+            cors-configurations:
+              '[/**]':
+                allowedOriginPatterns:
+                  - "*"
+                allowedMethods:
+                  - "*"
+                allowedHeaders:
+                  - "*"
+          routes:
+            - id: r1
+              uri: http://localhost:8056
+              predicates:
+                - Path= /customers/**
+            - id: r2
+              uri: http://localhost:8059
+              predicates:
+                - Path= /accounts/**

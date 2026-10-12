@@ -1,0 +1,64 @@
+.accounts-page {
+  padding: 2rem;
+}
+
+.accounts-table th {
+  background-color: #0c6e0c;
+  color: #ffffff;
+  border-color: #073c07;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+}
+.accounts-table-container {
+  overflow-x: auto;
+}
+
+.accounts-table{
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.accounts-table,
+.accounts-table th,
+.accounts-table td {
+  border-color: #073c07;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.accounts-table th,
+.accounts-table td {
+  vertical-align: middle;
+}
+
+.accounts-table td {
+  background-color: #f3f3f3;
+  color: #000000;
+  border-color: #073c07;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.accounts-table tbody tr:hover td,
+.accounts-table tbody tr:focus-within td {
+  background-color: #acccab;
+}
+
+.accounts-table thead tr:hover th,
+.accounts-table thead tr:focus-within th {
+  background-color: #0aaf0a;
+}
+
+.accounts-table td::selection {
+  background-color: #08CB00;
+  color: #000000;
+}
+
+.accounts-table th::selection {
+  background-color: #08CB00;
+  color: #000000;
+}
