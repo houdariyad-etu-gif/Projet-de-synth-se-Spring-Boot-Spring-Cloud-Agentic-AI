@@ -1,12 +1,13 @@
 <div class="accounts-page">
+   <!--  | <- pipe : pour le subscribe -->
   @if(accounts$ | async; as state)
   {
-    @if(state.status === RequestStatus.ERROR){
-      <div class="text-danger">
-        {{state.errorMessage}}
+    @if(state.status == RequestStatus.ERROR){
+      <div class="text-danger" style="font-size: 1.5rem; font-weight: bold;">
+        {{ state.errorMessage }} <span style="font-size: 1.2rem;">&#128542;</span>
       </div>
     }
-    @else if(state.status === RequestStatus.SUCCESS){
+    @else if(state.status == RequestStatus.SUCCESS){
       <div class="table-responsive accounts-table-container">
         <table class="table table-bordered accounts-table table-hover">
           <thead>
