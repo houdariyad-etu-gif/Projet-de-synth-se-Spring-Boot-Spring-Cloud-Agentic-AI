@@ -37,6 +37,7 @@ L'objectif est de démontrer comment connecter un LLM (Large Language Model) à 
 ## 🏗️ Architecture du Projet
 
 ```mermaid
+%%{init: {'flowchart': {'layout': 'elk'}}}%%
 graph TD
     Angular[Angular Frontend<br/>Port: 4200] --> Gateway[API Gateway<br/>Port: 9999]
     Gateway --> Customer[Customer Service<br/>Port: 8056]
@@ -49,9 +50,9 @@ graph TD
     
     Customer --> Eureka[Discovery Service<br/>Port: 8761]
     Ebank --> Eureka
+    Ebank -.->|Feign| Customer
     Bot --> Eureka
     Gateway --> Eureka
-
 ```
 ### Ports des Services
 
