@@ -1,0 +1,23 @@
+<div class="card p-3">
+  <div class="card-body">
+    <input [(ngModel)]="query" type="text" class="form-control m-2" style="display: inline; width: 80%;" placeholder="Ask me anything..." />
+    <button (click)="askAgentStream()" class="btn btn-success" style="display: inline; width: 15%;">
+      <i class="bi bi-search"></i>
+    </button>
+      @if (loadingService.isLoading()) {
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      }
+
+  </div>
+
+  <div class="card-body">
+    <p>Response:</p>
+    @if(response$ | async ; as resp){
+      @if(resp.type == 'Response'){
+        <markdown [data]="resp.content"></markdown>
+      }
+    }
+  </div>
+</div>

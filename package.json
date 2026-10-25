@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "ngx-markdown": "^21.3.0",
     "nvm": "^0.0.4"
   }
 }

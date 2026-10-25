@@ -31,3 +31,19 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Dépendances Node
+node_modules/
+package-lock.json
+angular-front/node_modules/
+angular-front/package-lock.json
+
+# Fichiers de build
+angular-front/dist/
+
+# IDE
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db

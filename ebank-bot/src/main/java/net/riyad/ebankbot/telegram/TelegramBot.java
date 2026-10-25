@@ -42,7 +42,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         String conversationId = "telegram-" + chatId;
 
         try {
-            String answer = aiAgent.chat(query, conversationId);
+            String answer = aiAgent.chat(query);
             execute(new SendMessage(chatId, answer));
         } catch (TelegramApiException e) {
             throw new IllegalStateException("Unable to send Telegram response", e);

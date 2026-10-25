@@ -13,12 +13,23 @@ spring:
                   - "*"
                 allowedHeaders:
                   - "*"
+          httpclient:
+            connect-timeout: 30000
+            response-timeout: 60000
+          default-filters:
+            - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_FIRST
           routes:
             - id: r1
               uri: http://localhost:8056
               predicates:
-                - Path= /customers/**
+                - Path=/customers/**
             - id: r2
               uri: http://localhost:8059
               predicates:
-                - Path= /accounts/**
+                - Path=/accounts/**
+            - id: r3
+              uri: http://localhost:8058
+              predicates:
+                - Path=/EBANK-BOT/**
+              filters:
+                - StripPrefix=1
