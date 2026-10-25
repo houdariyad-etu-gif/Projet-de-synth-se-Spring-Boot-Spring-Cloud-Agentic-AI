@@ -133,6 +133,40 @@ Rendez-vous sur `http://localhost:4200/bot` et posez des questions :
 
 ---
 
+## 📸 Aperçu de l'Application
+
+Voici quelques captures d'écran de l'interface Angular et des différents Bots en action.
+
+### 1. Interface du Chatbot avec affichage Markdown et Streaming
+*Exemple de réponse générée par l'IA sous forme de tableau avec bordures.*
+
+![Interface Chatbot](img/liste_compte_bancaires_tableau_avec_bordure.jpg)
+
+### 2. Liste des clients
+*Récupération des clients depuis le microservice `customer-service` via l'Agent IA.*
+
+![Liste des clients](img/liste_clients.jpg)
+
+### 3. Liste des comptes bancaires
+*Affichage des comptes récupérés depuis le microservice `ebank-service`.*
+
+![Liste des comptes](img/list-accounts.jpg)
+
+### 4. Création d'un compte bancaire
+*Exemple d'action réalisée avec succès via l'Agent IA.*
+
+![Création de compte](img/compte_bancaire_cree_avec_Succes.jpg)
+
+### 5. Intégration Discord & Telegram
+*L'agent IA est également accessible directement depuis vos messageries préférées.*
+
+**Discord :**
+![Réponse Discord](img/reponse_via_discord_bot.jpg)
+
+**Telegram :**
+![Réponse Telegram](img/reponse_via_telegram_bot.jpg)
+
+---
 ## 🛠️ Stack Technique
 
 *   **Backend** : Java 21, Spring Boot 4.1.1, Spring Cloud (Gateway, Eureka, OpenFeign), Spring AI 2.0.1, MCP.
