@@ -71,7 +71,7 @@ graph TD
 ### Prérequis
 
 *   **Java 21** (JDK)
-*   **Maven** 
+*   **Maven**
 *   **Node.js** (v18+) et **npm** pour le frontend
 *   **Ollama** (pour l'IA locale) ou une clé API (Groq/OpenAI)
 
@@ -173,5 +173,4 @@ Voici quelques captures d'écran de l'interface Angular et des différents Bots 
 *   **Frontend** : Angular 21, TypeScript, Bootstrap, ngx-markdown.
 *   **Base de données** : H2 (en mémoire pour les tests).
 *   **IA** : Ollama (local) / Groq (cloud).
-
 
